@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Text Analyzer</title>
+</head>
+<body>
+<section class="wrapper">
+    <header>
+        <h1>Analyze Text</h1>
+        <p>Enter your text in the field below and click the 'Analyze' button.</p>
+    </header>
+    <section class="content">
+        <form name="form" id="form">
+            <label for="text">Text</label>
+            <textarea cols="70" rows="10" id="text" onclick="this.select()" onfocus="this.select()"></textarea>
+            <input type="button" value="Analyze!" name="analyze" id="analyze">
+            <input type="button" value="Clear" name="clear" id="clear">
+        </form>
+        <section id="result">
+            <h2>Text Evaluation Results</h2>
+            <table><tfoot><tr><td>
+                <table>
+                    <thead>
+                    <tr><th>Characters</th><td>&nbsp;</td></tr>
+                    </thead>
+                    <tbody>
+                    <tr><th>Total:</th><td><span id="length">0</span></td></tr>
+                    <tr><th>Non-space:</th><td><span id="length-non-space">0</span></td></tr>
+                    <tr><th>Unique non-space:</th><td><span id="unique">0</span></td></tr>
+                    <tr><th>Vowels:</th><td><span id="vowels">0</span></td></tr>
+                    <tr><th>Consonants:</th><td><span id="consonants">0</span></td></tr>
+                    <tr><th>Numbers:</th><td><span id="numbers">0</span></td></tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                    <tr><th>Special characters</th><td>&nbsp;</td></tr>
+                    </thead>
+                    <tbody>
+                    <tr><th>Total:</th><td><span id="special">0</span></td></tr>
+                    <tr><th>Periods:</th><td><span id="periods">0</span> <em></em></td></tr>
+                    <tr><th>Commas:</th><td><span id="commas">0</span> <em></em></td></tr>
+                    <tr><th>Exclamation marks:</th><td><span id="exclamations">0</span> <em></em></td></tr>
+                    </tbody>
+                </table>
+            </td><td>
+                <table>
+                    <thead>
+                    <tr><th>Words</th><td>&nbsp;</td></tr>
+                    </thead>
+                    <tbody>
+                    <tr><th>Total:</th><td><span id="words">0</span></td></tr>
+                    <tr><th>Unique:</th><td><span id="words_uniq">0</span></td></tr>
+                    <tr><th>Capitalized:</th><td><span id="capitalized">0</span> <em>chars.</em></td></tr>
+                    <tr><th>Min length:</th><td><span id="word_len-min">0</span> <em>chars.</em></td></tr>
+                    <tr><th>Max length:</th><td><span id="word_len-max">0</span> <em>chars.</em></td></tr>
+                    <tr><th>Average length:</th><td><span id="word_len-average">0</span> <em>chars.</em></td></tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                    <tr><th>Sentences</th><td>&nbsp;</td></tr>
+                    </thead>
+                    <tbody>
+                    <tr><th>Total:</th><td><span id="sentences">0</span></td></tr>
+                    <tr><th>Min length:</th><td><span id="sentence_min">0</span> <em>words</em></td></tr>
+                    <tr><th>Max length:</th><td><span id="sentence_max">0</span> <em>words</em></td></tr>
+                    <tr><th>Average length:</th><td><span id="sentence_avg">0</span> <em>words</em></td></tr>
+                    </tbody>
+                </table>
+            </td></tr>
+            <tr><td class="white">
+                <table id="wordfreq">
+                    <thead>
+                    <tr><th>Frequently occurring words</th><td>&nbsp;</td></tr>
+                    </thead>
+                    <tbody>
+                    <tr><th><span id="word1">&nbsp;</span></th><td><span id="num1"></span></td></tr>
+                    <tr><th><span id="word2">&nbsp;</span></th><td><span id="num2"></span></td></tr>
+                    <tr><th><span id="word3">&nbsp;</span></th><td><span id="num3">&nbsp;</span></td></tr>
+                    </tbody>
+                </table>
+            </td><td class="white">
+                <table id="textSpec">
+                    <thead>
+                    <tr><th>Features</th><td>&nbsp;</td></tr>
+                    </thead>
+                    <tbody>
+                    <tr><th>Number of quotes in the text:</th><td><span id="quotes">0</span> </td></tr>
+                    <tr><th>Any consecutive duplicates?</th><td><span id="repeating">No</span> </td></tr>
+                    <tr><th>Is text a palindrome?</th><td><span id="palindrome">No</span> </td></tr>
+                    </tbody>
+                </table>
+            </td></tr>
+            </tfoot></table>
+        </section>
+    </section>
+</section>
+</body>
+<!--<script src="textAnalyze.js"></script>-->
+<script src="app.js"></script>
+</html>
